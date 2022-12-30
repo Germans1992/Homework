@@ -1,15 +1,14 @@
 public class Main {
-    public static void main(String[] args){
-Person person = new Person(17, 90,"German", 192);
-Person secondPerson = new Person("German",30,181,90);
-        System.out.println(person);
-        System.out.println(secondPerson);
-        System.out.println("--------------");
+    public static void main(String[] args) {
+        PensionFund state = new PensionFund("Texas",true,"16.08.1992");
+        PensionFund noState = new PensionFund("Dallas", false,"12.01.2003");
 
-        Person vladimir = new Person(38,10,100);
-        System.out.println(vladimir);
-        person.go();
-        vladimir.order();
+        double statePension = state.countPensionPayment(15,1000,2900);
+        double noStatePension = noState.countPensionPayment(15,1000,2900);
+
+        System.out.println(statePension);
+        System.out.println(noStatePension);
 
     }
 }
+

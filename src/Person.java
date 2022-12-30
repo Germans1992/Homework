@@ -7,6 +7,7 @@ int size;
 int quantity;
 int price;
 
+
     public Person(String name, int age, int height, int weight) {
         this.name = name;
         this.age = age;
