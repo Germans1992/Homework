@@ -5,6 +5,8 @@ public class Main {
         Person secondPerson = new Person("German", 30,180,92);
         person.infoAbout();
         System.out.println(person);
+        person.go();
+        System.out.println(person);
 
         PensionFund state = new PensionFund("Texas",true,"16.08.1992");
         PensionFund noState = new PensionFund("Dallas", false,"12.01.2003");
