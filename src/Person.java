@@ -36,6 +36,10 @@ int price;
             System.out.println("You ordered 10 or less then 10 pieces, your price is " + price + "$");
         }
     }
+//Домашнее задание номер 1;
+    public void infoAbout(){
+        System.out.println("Name: " + name + " Age: " + age + " Height: " + height + " Weight: " + weight);
+    }
     public void go(){
         if(age < 18 || age > 70){
             System.out.println("I can't work i need to have a rest");
