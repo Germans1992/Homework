@@ -1,12 +1,43 @@
-public class Person {
-    String name;
-    int age;
-    int height;
-    int weight;
-int size;
-int quantity;
-int price;
+public abstract class Person {
+  private  String name;
+   private int age;
+   private int height;
+   private int weight;
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+
+        return age;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public abstract void die();
 
     public Person(String name, int age, int height, int weight) {
         this.name = name;
@@ -21,19 +52,6 @@ int price;
             this.weight = w;
             this.name = n;
             this.height = h;
-        }
-    }
-    public Person(int size, int quantity, int price){
-        this.size = size;
-        this.quantity = quantity;
-        this.price = price;
-    }
-    //Попробовал такой вариант(при покупке больше 10 пар обуви цена уменьшается на 10 процентов);
-    public void order(){
-        if(quantity > 10){
-            System.out.println("You ordered more than 10 pieces your price is " + (price - (price * 10 / 100)) + "$");
-        }else{
-            System.out.println("You ordered 10 or less then 10 pieces, your price is " + price + "$");
         }
     }
 //Домашнее задание номер 1;
