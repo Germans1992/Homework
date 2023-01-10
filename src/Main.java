@@ -17,45 +17,38 @@ public class Main {
         System.out.println(statePension);
         System.out.println(noStatePension);
 
-        Pensioner pensioner = new Pensioner("Anton",68,180,90);
-        pensioner.setPension(500);
-        pensioner.die();
-//        person.getName();
+//        Pensioner pensioner = new Pensioner("Anton",68,180,90);
+//        pensioner.setPension(500);
+//        pensioner.die();
+
+
+        Worker worker = new Worker("Oleg",74,190,91);
+        worker.setMinSalary(500);
+        worker.setMaxSalary(1000);
+        double workersPension;
+
+        workersPension = worker.calculatePension();
+        System.out.println("Пенсия равна " + workersPension);
 
 
 
-//        First level: У вас есть класс Person.
-//
-//
-//        1) Сделать его правильным - создать геттеры
-//        и сеттеры, проверить, что он соответствует
-//        тем правилам, которые мы с вами обсуждали.
-//
-//
-//        2) Создать классы Pensioner и Worker
-//        Унаследовать их от класса Person.
-//        В класс Pensioner добавить дробное поле pension,
-//        в класс Worker добавить два поля minSalary и maxSalary.
-//
-//
-//        3) Класс Person превращаем в абстрактный.
-//        В него добавляем абстрактный метод die(),
-//        которая ничего не возвращает.
-//
-//
-//        4) В Worker реализуем этот метод таким образом:
-//        пишем на экран сообщение "Этот человек не дожил
-//        до пенсии"
-//
-//
-//        5) В классе Pensioner реализуем так:
-//        пишем на экран "Этот пенсионер умер,
-//        он заработал: x". Где вместо x нужно рассчитать
-//        значение по формуле "(age-50)*pension"
-//
-//
-//        Second level:
 
     }
 }
 
+//First level: 1) Создать интерфейс AbleToCalculatePension с
+// одним методом calculatePension, возвращающим дробное число
+//
+//
+//2) класс Worker должен реализовать этот интерфейс (implements).
+// реализация метода выглядит так:
+//
+//
+//а) Внутри метода создается объект класса Пенсионный фонд
+// (из дз от 14 декабря). В нем вызывается метод расчета пенсии,
+// в него передаются параметры: возраст, минимальная,
+// максимальная зарплаты. Результат этого метода возвращается
+// из метода calculatePension
+//
+//
+//Second level:
