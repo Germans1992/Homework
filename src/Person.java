@@ -4,6 +4,14 @@ public abstract class Person {
    private int height;
    private int weight;
 
+   private Person mom;
+
+   private Person dad;
+
+   private Person[] children;
+
+   private Sex sex;
+
     public String getName() {
         return name;
     }
@@ -11,6 +19,14 @@ public abstract class Person {
     public int getAge() {
 
         return age;
+    }
+
+    public Sex getSex() {
+        return sex;
+    }
+
+    public void setSex(Sex sex) {
+        this.sex = sex;
     }
 
     public int getHeight() {
@@ -37,7 +53,7 @@ public abstract class Person {
         this.weight = weight;
     }
 
-    public abstract void die();
+    abstract void die();
 
     public Person(String name, int age, int height, int weight) {
         this.name = name;
